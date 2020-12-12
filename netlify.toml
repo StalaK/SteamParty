@@ -1,0 +1,9 @@
+[[redirects]]
+    from = "/api"
+    to = "https://api.steampowered.com"
+    force = true
+
+[[redirects]]
+    from = "/store"
+    to = "https://store.steampowered.com"
+    force = true
