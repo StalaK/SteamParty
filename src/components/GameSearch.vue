@@ -19,6 +19,7 @@
         },
         methods: {
             searchGames: async function() {
+                console.log(process.env.VUE_APP_Steam_API_Key)
                 this.$emit('load-state-changed', { loading: true, loaded: false });
 
                 for (let player of this.party) {

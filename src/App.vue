@@ -9,7 +9,7 @@
       v-on:games-searched="setSharedGames" />
     <Loading v-if="loadState.loading" />
     <GameDisplay 
-      
+      v-if="!loadState.loading && loadState.loaded"
       v-bind:sharedGames="sharedGames" />
   </div>
 </template>
