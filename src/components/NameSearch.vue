@@ -28,7 +28,7 @@ export default {
       try
       {
         let request = new Request(
-          `${process.env.VUE_APP_Steam_API_URL}/ISteamUser/ResolveVanityURL/v0001/?key=${process.env.VUE_APP_Steam_API_Key}&vanityurl=${this.usernameField}`,
+          `/api/ISteamUser/ResolveVanityURL/v0001/?key=${process.env.VUE_APP_Steam_API_Key}&vanityurl=${this.usernameField}`,
           {
             method: "GET",
             mode: "cors",
