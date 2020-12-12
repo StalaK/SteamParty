@@ -24,7 +24,7 @@
 
                 for (let player of this.party) {
                     let request = new Request(
-                        `/api/IPlayerService/GetOwnedGames/v0001/?key=${process.env.VUE_APP_Steam_API_Key}&steamid=${player.steamId}&format=json `,
+                        `${process.env.VUE_APP_Steam_API_URL}/api/IPlayerService/GetOwnedGames/v0001/?key=${process.env.VUE_APP_Steam_API_Key}&steamid=${player.steamId}&format=json `,
                         {
                             method: "GET",
                             mode: "cors",
@@ -63,7 +63,7 @@
             getGameDetails: async function() {
                 for(let gameId of this.gameIdList) {
                     let request = new Request(
-                        `/store/api/appdetails/?appids=${gameId}`,
+                        `${process.env.VUE_APP_Steam_Store_URL}/store/api/appdetails/?appids=${gameId}`,
                         {
                             method: "GET",
                             mode: "cors",
